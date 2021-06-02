@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+}
+
+.header {
+    display: flex;
+    height: 60px;
+    padding: 20px 10px;
+    background-color:#000;
+    color:#fff;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header header{
+  letter-spacing: 0.2rem;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 5px #fff;  
+}
+
+.header nav {
+    flex: 0.5;
+}
+
+.header ol {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header ol li:hover {
+    color:#1fb4e0;
+    cursor: pointer;
+    transition: color 0.1s ease-in;
+}
+
+.header #search {
+    position: relative;
+}
+
+.header #search #searchbox {
+    height: 25px;
+    border: 0;
+    border-radius: 10px;
+    outline:none;
+    padding:10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header #search .fas {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #a12185d9;
+}
+
+.menu{
+    display: none;
+}
+
+@media screen and (max-width: 900px){
+    .header{
+        flex-direction: column;
+        min-height: 300px;
+        align-items: flex-start;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+    }
+    nav{
+        width: 100%;
+    }
+    .header ol{
+        flex-direction: column;
+    }
+    .header ol li{
+        padding:10px;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        top: 35px;
+        right: 30px;
+    }
+
+    .menu .fa-bars  {
+        font-size: 1.5rem;
+        color:#86aeba;
+    }
+
+    .header.collapse {
+        min-height: 75px;
+        
+    }
+
+    .header.collapse nav,
+    .header.collapse #search {
+        display: none;
+    }
+
+}
