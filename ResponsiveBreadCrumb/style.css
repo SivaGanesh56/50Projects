@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 30px;
+}
+
+.container ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+}
+
+.container ul::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 11%;
+    height: 4%;
+    width: 80%;
+    background-color: #98ac98;
+    z-index: -1;
+}
+
+.container ul li {
+    margin: 0px 20px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.circle {
+    border-radius: 50%;
+    background: #4366b2;
+    height: 15px;
+    width: 15px;
+}
+
+.progress {
+    position: absolute;
+    background: #0c68ed;
+    height: 5%;
+    left: 11%;
+    top: 15%;
+    z-index: -1;
+}
+
+.btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.btn {
+    margin: 0px 10px;
+    padding: 10px;
+    border-radius: 15px;
+    width: 10%;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #e75c5c;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #6565ca;
+    color: #fff;
+}
+
+.btn.disable {
+    cursor: not-allowed;
+    background-color: grey;
+}
+
+@media(max-width: 800px) {
+    .progress, 
+    .container ul::before {
+        top: 10%
+    }
+}
